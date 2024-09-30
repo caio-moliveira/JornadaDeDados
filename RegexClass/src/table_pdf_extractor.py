@@ -23,7 +23,7 @@ class PDFTableExtractor:
             self.download_file()
             main= self.get_table_data(self.configs["table_areas"], self.configs["columns"])
             main = self.sanitize_column_names(main)
-            self.send_to_db(main)
+            self.send_to_db(main, "pdf_table")
         except Exception as e:
             print(e)
 
